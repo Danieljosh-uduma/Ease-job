@@ -33,14 +33,23 @@ export function HomeHero() {
 				</div>
 				<div className="relative bg-black/50 p-4 rounded-lg w-4/5 max-w-2xl">
 					<Tabs defaultValue="find-talent" className="w-full max-w-2xl">
-						<TabsList className="rounded-b-none rounded-t-md bg-accent p-0 m-0 w-full">
-							<TabsTrigger value="find-talent" className={HeroTabsTriggerStyle}>
-								Find Talent
-							</TabsTrigger>
-							<TabsTrigger value="browse-jobs" className={HeroTabsTriggerStyle}>
-								Browse Jobs
-							</TabsTrigger>
-						</TabsList>
+						<div className=" mx-auto w-[90%] max-lg:w-full">
+							<TabsList className="rounded-b-none rounded-t-md bg-accent p-0 m-0 w-full">
+								<TabsTrigger
+									value="find-talent"
+									className={HeroTabsTriggerStyle}
+								>
+									Find Talent
+								</TabsTrigger>
+								<TabsTrigger
+									value="browse-jobs"
+									className={HeroTabsTriggerStyle}
+								>
+									Browse Jobs
+								</TabsTrigger>
+							</TabsList>
+						</div>
+
 						<TabsContent value="find-talent">
 							<SearchBar
 								placeholder="Search by role, skills, or keywords"
