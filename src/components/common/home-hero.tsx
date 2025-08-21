@@ -9,6 +9,14 @@ import {
 import { SearchBar } from "../widgets/search-bar";
 
 export function HomeHero() {
+	const suggestionsItems: string[] = [
+		"Software Engineer",
+		"Data Scientist",
+		"Product Manager",
+		"UX Designer",
+		"Marketing Specialist",
+	];
+
 	return (
 		<div className="relative w-full h-[80vh] justify-center items-center flex flex-col px-10 pt-10">
 			<img
@@ -36,13 +44,7 @@ export function HomeHero() {
 						<TabsContent value="find-talent">
 							<SearchBar
 								placeholder="Search by role, skills, or keywords"
-								suggestions={[
-									"Software Engineer",
-									"Data Scientist",
-									"Product Manager",
-									"UX Designer",
-									"Marketing Specialist",
-								]}
+								suggestions={suggestionsItems}
 								onSubmit={(e) => {
 									e.preventDefault();
 									console.log("submitted");
@@ -52,13 +54,7 @@ export function HomeHero() {
 						<TabsContent value="browse-jobs">
 							<SearchBar
 								placeholder="Search by role, skills, or keywords"
-								suggestions={[
-									"Software Engineer",
-									"Data Scientist",
-									"Product Manager",
-									"UX Designer",
-									"Marketing Specialist",
-								]}
+								suggestions={suggestionsItems}
 								onSubmit={(e) => {
 									e.preventDefault();
 									console.log("submitted");
