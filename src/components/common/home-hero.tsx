@@ -5,8 +5,8 @@ import {
 	TabsList,
 	TabsTrigger,
 	HeroTabsTriggerStyle,
-} from "../ui/tabs";
-import { SearchBar } from "../widgets/search-bar";
+} from "@/components/ui/tabs";
+import { SearchBar } from "@/components/widgets/search-bar";
 
 export function HomeHero() {
 	const suggestionsItems: string[] = [
@@ -18,22 +18,22 @@ export function HomeHero() {
 	];
 
 	return (
-		<div className="relative w-full h-[80vh] justify-center items-center flex flex-col px-10 pt-10">
+		<div className="relative w-full h-[120vh] max-h-[803px] justify-center items-center flex flex-col py-20">
 			<img
 				src={hero}
 				alt="Employees at work place"
 				className="absolute inset-0 object-cover object-center z-0 w-full h-full"
 			/>
-			<div className="flex flex-col w-4/5 h-[80%] items-center justify-around">
+			<div className="flex flex-col w-4/5 gap-48">
 				<div className="flex w-full justify-center backdrop-blur-[2px] p-14">
 					<h1 className="w-full max-w-6xl text-5xl text-center drop-shadow-2xl drop-shadow-gray-500 text-wrap font-bold text-white">
 						Connecting Talent, Employers, and <br className="max-lg:hidden" />{" "}
 						Trusted Agents. All in One Place
 					</h1>
 				</div>
-				<div className="relative bg-black/50 p-4 rounded-lg w-4/5 max-w-2xl">
+				<div className="relative bg-black/50 p-4 rounded-lg w-4/5 max-w-2xl mx-auto">
 					<Tabs defaultValue="find-talent" className="w-full max-w-2xl">
-						<div className=" mx-auto w-[90%] max-lg:w-full">
+						<div className=" mx-auto w-[90%] max-lg:w-full py-10">
 							<TabsList className="rounded-b-none rounded-t-md bg-accent p-0 m-0 w-full">
 								<TabsTrigger
 									value="find-talent"

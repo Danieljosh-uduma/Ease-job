@@ -49,7 +49,7 @@ export function TargetCustomer() {
 
 
 	return (
-		<div className="flex flex-col items-center gap-7 w-full">
+		<div className="relative flex flex-col items-center gap-7 w-full">
 			<h1 className="text-4xl font-semibold text-center">Built For You</h1>
 			<Tabs
 				value={activeTab}

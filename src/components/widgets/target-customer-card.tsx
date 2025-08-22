@@ -16,10 +16,10 @@ export function TargetCustomerCard(props: TargetCustomerProps) {
 	return (
 		<Card
 			className={
-				"relative h-full max-h-[490px] max-w-7xl items-center justify-center m-auto"
+				"relative h-full max-h-[600px] max-w-7xl items-center justify-center m-auto"
 			}
 		>
-			<div className="flex flex-col w-1/2 items-center text-white text-center text-wrap gap-8 h-full p-10 my-80 backdrop-blur-xs z-50 ">
+			<div className="flex flex-col w-1/2 items-center text-white text-center text-wrap gap-8 h-full p-10 my-80 backdrop-blur-[2px] z-50 ">
 				<CardTitle>
 					<h1 className="text-4xl">{title}</h1>
 				</CardTitle>
@@ -40,7 +40,7 @@ export function TargetCustomerCard(props: TargetCustomerProps) {
 			<img
 				src={getImageUrl(backgroundImg || "employers.png")}
 				alt="test"
-				className="absolute inset-0  w-full h-full object-cover rounded-xl"
+				className="absolute w-full h-full object-cover object-top rounded-xl"
 			/>
 		</Card>
 	);
