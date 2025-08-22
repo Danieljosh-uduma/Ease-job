@@ -1,3 +1,5 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 import "./App.css";
 import { ThemeProvider } from "@/contexts/theme-provider";
 import AppRouter from "./router";
