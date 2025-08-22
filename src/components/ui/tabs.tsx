@@ -7,6 +7,8 @@ const HeroTabsTriggerStyle = cn(
 	"font-semibold h-full rounded-b-none rounded-t-md border-t-0 border-x-0 border-b-4 data-[state=active]:text-secondary data-[state=active]:border-secondary data-[state=active]:bg-transparent data-[state=active]:shadow-none"
 );
 
+const HowWorkflowTriggerStyle = cn ("font-semibold data-[state=active]:bg-[#E7F0EC]")
+
 function Tabs({
 	className,
 	...props
@@ -65,4 +67,4 @@ function TabsContent({
 	);
 }
 
-export { Tabs, TabsList, TabsTrigger, TabsContent, HeroTabsTriggerStyle };
+export { Tabs, TabsList, TabsTrigger, TabsContent, HeroTabsTriggerStyle, HowWorkflowTriggerStyle };

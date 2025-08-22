@@ -57,7 +57,7 @@ export function TargetCustomer() {
 				className="w-full max-w-7xl"
 			>
 				<div className="flex justify-center w-full mb-5">
-					<TabsList className="mx-auto w-1/2 max-w-3xl bg-warning-light">
+					<TabsList className="mx-auto w-1/2 max-w-3xl">
 						<TabsTrigger value="employers">Employers</TabsTrigger>
 						<TabsTrigger value="job-seekers">Job Seekers</TabsTrigger>
 						<TabsTrigger value="agents">Agents</TabsTrigger>
