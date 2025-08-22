@@ -14,7 +14,7 @@ import { Button } from "../ui/button";
 
 export function Navbar() {
 	return (
-		<div className="relative flex justify-around w-full p-3 z-[100000]">
+		<div className="sticky top-0 flex justify-around w-full p-3 z-[100000] bg-background/90 backdrop-blur-xs">
 			<NavLogo />
 			<NavigationMenu viewport={false}>
 				<NavigationMenuList>

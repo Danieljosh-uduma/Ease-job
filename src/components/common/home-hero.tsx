@@ -22,7 +22,7 @@ export function HomeHero() {
 			<img
 				src={hero}
 				alt="Employees at work place"
-				className="absolute inset-0 object-cover -z-10 w-full h-full"
+				className="absolute inset-0 object-cover object-center z-0 w-full h-full"
 			/>
 			<div className="flex flex-col w-4/5 h-[80%] items-center justify-around">
 				<div className="flex w-full justify-center backdrop-blur-[2px] p-14">

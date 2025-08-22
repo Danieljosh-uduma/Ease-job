@@ -1,10 +1,12 @@
-import { HomeHero } from "@/components/common";
-
+import { HomeHero, TargetCustomer, WhyEaseJob } from "@/components/common";
+import { RootLayout } from "@/components/layout";
 
 export function HomePage() {
-  return (
-    <div className="flex justify-center items-center flex-col">
-        <HomeHero/>
-    </div>
-  )
+	return (
+		<RootLayout>
+			<HomeHero />
+			<TargetCustomer />
+			<WhyEaseJob />
+		</RootLayout>
+	);
 }
