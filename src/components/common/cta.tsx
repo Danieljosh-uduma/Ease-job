@@ -4,10 +4,10 @@ import { MoveRight } from "lucide-react";
 
 export function CTA() {
 	return (
-		<div>
-			<Card className="text-center justify-center items-center mx-auto p-10 w-4/5 h-fit bg-secondary">
-				<CardContent className="text-background font-semibold text-4xl space-y-10">
-					<p className="">
+		<div className="my-auto">
+			<Card className="text-center justify-center items-center mx-auto p-10 w-4/5 h-fit max-w-[1162px] bg-secondary">
+				<CardContent className="text-background font-semibold text-4xl px-20 space-y-10">
+					<p className="text-wrap">
 						Join Thousands Building Careers, Teams & Connections
 					</p>
 
