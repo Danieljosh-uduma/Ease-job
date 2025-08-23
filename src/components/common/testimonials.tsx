@@ -1,8 +1,7 @@
 import { animate, motion, useMotionValue } from "motion/react";
 import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
-import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 import { useEffect, useState } from "react";
-import useMeasure from 'react-use-measure'
+import useMeasure from "react-use-measure";
 import { User } from "lucide-react";
 
 export function Testimonials() {
@@ -50,7 +49,7 @@ export function Testimonials() {
 				Trusted by Thousands Here’s Why
 			</h1>
 
-			<ScrollArea className="w-4/5 overflow-x-auto overflow-y-hidden pb-10 mx-auto bg-warning-light">
+			<div className="w-4/5 overflow-hidden pb-10 mx-auto bg-warning-light">
 				<motion.div
 					style={{ x: xTranslation }}
 					ref={ref}
@@ -73,14 +72,13 @@ export function Testimonials() {
 								</p>
 							</CardContent>
 							<CardFooter className="gap-2">
-								<User/>
+								<User />
 								<CardTitle>Chike Obi</CardTitle>
 							</CardFooter>
 						</Card>
 					))}
 				</motion.div>
-				<ScrollBar orientation="horizontal" />
-			</ScrollArea>
+			</div>
 		</div>
 	);
 }

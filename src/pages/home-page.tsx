@@ -4,7 +4,9 @@ import {
 	TargetCustomer,
 	Testimonials,
 	WhyEaseJob,
+	CTA,
 } from "@/components/common";
+
 import { RootLayout } from "@/components/layout";
 
 export function HomePage() {
@@ -15,6 +17,7 @@ export function HomePage() {
 			<WhyEaseJob />
 			<HowWorkFlows />
 			<Testimonials />
+			<CTA/>
 		</RootLayout>
 	);
 }
