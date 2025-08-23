@@ -1,9 +1,9 @@
 import { animate, motion, useMotionValue } from "motion/react";
 import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
-import { Group } from "lucide-react";
 import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 import { useEffect, useState } from "react";
 import useMeasure from 'react-use-measure'
+import { User } from "lucide-react";
 
 export function Testimonials() {
 	const items: string[] = Array.from({ length: 12 }, (_, i) => `Item ${i + 1}`);
@@ -64,7 +64,7 @@ export function Testimonials() {
 					}}
 					className="grid grid-rows-2 grid-flow-col gap-4"
 				>
-					{items.map((i) => (
+					{[...items, ...items].map((i) => (
 						<Card key={i} className="w-56 max-w-xs">
 							<CardContent className="">
 								<p>
@@ -73,7 +73,7 @@ export function Testimonials() {
 								</p>
 							</CardContent>
 							<CardFooter className="gap-2">
-								<Group />
+								<User/>
 								<CardTitle>Chike Obi</CardTitle>
 							</CardFooter>
 						</Card>
