@@ -28,7 +28,7 @@ export function Footer() {
 						</div>
 					</form>
 				</div>
-				<div className="grid gap-5 text-muted-foreground h-fit">
+				<div className="grid gap-5 text-muted-foreground h-fit whitespace-nowrap">
 					<p className="mb-5 font-semibold text-2xl text-muted-foreground/50">
 						COMPANY
 					</p>
@@ -38,7 +38,7 @@ export function Footer() {
 					<p>Terms & Conditions</p>
 					<p>Privacy Policy</p>
 				</div>
-				<div className="grid gap-5 text-muted-foreground h-fit">
+				<div className="grid gap-5 text-muted-foreground h-fit whitespace-nowrap">
 					<p className="mb-5 font-semibold text-2xl text-muted-foreground/50">
 						SOLUTIONS
 					</p>
@@ -46,7 +46,7 @@ export function Footer() {
 					<p>Post a Job</p>
 					<p>How it works</p>
 				</div>
-				<div className="grid gap-5 text-muted-foreground h-fit">
+				<div className="grid gap-5 text-muted-foreground h-fit whitespace-nowrap">
 					<p className="mb-5 font-semibold text-2xl text-muted-foreground/50">
 						CONTACT US
 					</p>
@@ -54,7 +54,7 @@ export function Footer() {
 					<p>+2348144556678</p>
 				</div>
 			</div>
-			<div className="flex bg-accent p-20 gap-5 items-end max-w-7xl ">
+			<div className="flex bg-accent p-20 gap-5 items-end max-w-7xl whitespace-nowrap ">
 				<Logo width={36} height={36}/>
 				<p className="text-primary text-2xl font-bold">Ease Job</p>
 				<p className="text-center h-full leading-relaxed text-muted-foreground">
