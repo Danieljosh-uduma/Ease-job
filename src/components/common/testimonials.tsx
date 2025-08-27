@@ -2,7 +2,7 @@ import { animate, motion, useMotionValue } from "motion/react";
 import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import useMeasure from "react-use-measure";
-import { User } from "lucide-react";
+import { LuUser } from "react-icons/lu";
 
 export function Testimonials() {
 	const items: string[] = Array.from({ length: 12 }, (_, i) => `Item ${i + 1}`);
@@ -72,7 +72,7 @@ export function Testimonials() {
 								</p>
 							</CardContent>
 							<CardFooter className="gap-2">
-								<User />
+								<LuUser />
 								<CardTitle>Chike Obi</CardTitle>
 							</CardFooter>
 						</Card>

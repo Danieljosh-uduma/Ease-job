@@ -1,4 +1,4 @@
-import { MoveRight } from "lucide-react";
+import { LuMoveRight } from "react-icons/lu";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
 import { getImageUrl } from "@/lib/utils";
@@ -32,7 +32,7 @@ export function TargetCustomerCard(props: TargetCustomerProps) {
 						className="w-1/2 mx-auto cursor-pointer"
 					>
 						Get Started
-						<MoveRight />
+						<LuMoveRight />
 					</Button>
 				</CardFooter>
 			</div>

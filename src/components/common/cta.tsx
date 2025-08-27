@@ -1,6 +1,6 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MoveRight } from "lucide-react";
+import { LuMoveRight } from "react-icons/lu";
 
 export function CTA() {
 	return (
@@ -14,7 +14,7 @@ export function CTA() {
 					<CardFooter>
 						<Button size={"lg"} className="bg-background mx-auto text-black hover:bg-accent/80">
 							Get Started
-							<MoveRight />
+							<LuMoveRight />
 						</Button>
 					</CardFooter>
 				</CardContent>

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { MoveRight } from "lucide-react";
+import { LuMoveRight } from "react-icons/lu";
 import Group3Icon from "@/assets/group_3_line.svg?react";
 
 export function WhyEaseJob() {
@@ -21,7 +21,7 @@ export function WhyEaseJob() {
 					<Button asChild>
 						<Link to="#">
 							Get Started
-							<MoveRight />
+							<LuMoveRight />
 						</Link>
 					</Button>
 				</div>

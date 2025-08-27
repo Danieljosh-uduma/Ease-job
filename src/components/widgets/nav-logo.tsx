@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import Logo from "@/assets/logo.svg?react";
-import { MenuIcon, X } from "lucide-react";
+import { LuMenu, LuX } from "react-icons/lu";
 import { MobileMenu } from "./mobile-menu-items";
 
 export type navMenuProps = {
@@ -14,9 +14,9 @@ export function NavLogo(props: navMenuProps) {
 		<div className="flex items-center gap-2 my-auto h-full">
 			<div className="p-1 hover:cursor-pointer" onClick={onClickMenu}>
 				{isOpen ? (
-					<X className="max-lg:block hidden" />
+					<LuX className="max-lg:block hidden" />
 				) : (
-					<MenuIcon className="hidden max-lg:block" />
+					<LuMenu className="hidden max-lg:block" />
 				)}
 			</div>
 			<MobileMenu isOpen={isOpen} onClickMenu={onClickMenu} />

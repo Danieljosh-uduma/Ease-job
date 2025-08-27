@@ -1,4 +1,4 @@
-import { MoveRight } from "lucide-react";
+import { LuMoveRight } from "react-icons/lu";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
@@ -29,7 +29,7 @@ export function Footer() {
 								className="rounded-r-none bg-background"
 							/>
 							<Button size={"icon"} type="submit" className="rounded-l-none">
-								<MoveRight />
+								<LuMoveRight />
 							</Button>
 						</div>
 					</form>
