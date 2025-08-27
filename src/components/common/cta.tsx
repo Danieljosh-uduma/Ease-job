@@ -12,7 +12,7 @@ export function CTA() {
 					</p>
 
 					<CardFooter>
-						<Button size={"lg"} className="bg-background mx-auto text-black">
+						<Button size={"lg"} className="bg-background mx-auto text-black hover:bg-accent/80">
 							Get Started
 							<MoveRight />
 						</Button>

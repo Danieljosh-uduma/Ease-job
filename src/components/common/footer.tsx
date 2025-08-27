@@ -2,12 +2,18 @@ import { MoveRight } from "lucide-react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
-import Logo from "@/assets/logo.svg?react"
+import Logo from "@/assets/logo.svg?react";
+import {
+	SiInstagram,
+	SiFacebook,
+	SiLinkedin,
+	SiTelegram,
+} from "react-icons/si";
 export function Footer() {
 	return (
-		<div className="bg-accent">
-			<div className="flex mx-auto gap-10 p-20 mt-20 max-w-7xl">
-				<div className="my-auto max-w-7xl w-[50%]">
+		<div className="bg-accent p-20 max-lg:p-10 space-y-20">
+			<div className="flex mx-auto gap-10 mt-20 max-w-7xl max-lg:flex-col">
+				<div className="my-auto max-w-7xl w-[50%] max-lg:w-full">
 					<form className="grid py-10 items-center gap-3 w-fit">
 						<p className="mb-5 text-muted-foreground font-semibold text-lg">
 							Subscribe to our Newsletter
@@ -54,12 +60,22 @@ export function Footer() {
 					<p>+2348144556678</p>
 				</div>
 			</div>
-			<div className="flex bg-accent p-20 gap-5 items-end max-w-7xl whitespace-nowrap ">
-				<Logo width={36} height={36}/>
-				<p className="text-primary text-2xl font-bold">Ease Job</p>
-				<p className="text-center h-full leading-relaxed text-muted-foreground">
-					 &copy; 2025 Ease Job. All rights reserved
+			<div className="flex bg-accent gap-3 max-w-7xl whitespace-nowrap max-lg:flex-col items-center max-lg:items-start">
+				<div className="flex gap-2 items-center">
+					<Logo width={36} height={36} />
+					<p className="text-primary text-2xl font-semibold">Ease Job</p>
+				</div>
+
+				<p className="max-lg:w-full text-end text-muted-foreground text-xs max-lg:text-left">
+					&copy; 2025 Ease Job. All rights reserved
 				</p>
+
+				<div className="flex gap-4 ml-auto max-lg:ml-0 text-primary ">
+					<SiFacebook />
+					<SiInstagram />
+					<SiLinkedin />
+					<SiTelegram />
+				</div>
 			</div>
 		</div>
 	);

@@ -6,7 +6,7 @@ import Group3Icon from "@/assets/group_3_line.svg?react";
 
 export function WhyEaseJob() {
 	return (
-		<div className="flex flex-col items-center w-[90%] max-w-7xl h-screen mx-auto">
+		<div className="flex flex-col items-center w-[90%] max-w-7xl mx-auto">
 			<h1 className="text-4xl font-semibold text-center">
 				Connecting People. Creating Opportunities
 			</h1>

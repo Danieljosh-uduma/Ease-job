@@ -8,7 +8,7 @@ export function Testimonials() {
 	const items: string[] = Array.from({ length: 12 }, (_, i) => `Item ${i + 1}`);
 	const [ref, { width }] = useMeasure();
 
-	const FAST_DURATION = 25;
+	const FAST_DURATION = 10;
 	const SLOW_DURATION = 75;
 
 	const [duration, setDuration] = useState(FAST_DURATION);
@@ -44,7 +44,7 @@ export function Testimonials() {
 	}, [rerender, xTranslation, duration, width, mustFinish]);
 
 	return (
-		<div className="w-full mx-auto space-y-10 bg-warning-light">
+		<div className="w-full mx-auto space-y-10 max-w-7xl bg-warning-light">
 			<h1 className="text-4xl font-semibold text-center p-5">
 				Trusted by Thousands Here’s Why
 			</h1>
