@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { TargetCustomerCard } from "@/components/widgets";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 
 export function TargetCustomer() {
 	const tabList = useMemo<string[]>(
