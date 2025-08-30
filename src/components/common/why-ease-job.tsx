@@ -7,18 +7,19 @@ import Group3Icon from "@/assets/group_3_line.svg?react";
 export function WhyEaseJob() {
 	return (
 		<div className="flex flex-col items-center w-[90%] max-w-7xl mx-auto">
-			<h1 className="text-4xl font-semibold text-center">
-				Connecting People. Creating Opportunities
-			</h1>
-			<div className="flex justify-between w-full p-10">
+			<h1 className="text-4xl font-semibold text-center max-lg:text-2xl">
+				Connecting People. <br className="hidden max-lg:block" />
+				Creating Opportunities
+			</h1> 
+			<div className="flex justify-between w-full mx-auto p-10 max-lg:flex-col-reverse max-lg:p-5 ">
 				{/**Left Item */}
-				<div className="w-2/5 space-y-20 p-20 mt-20">
-					<p className="text-wrap text-muted-foreground">
+				<div className="w-2/5 space-y-20 p-20 mt-20 max-lg:space-y-0 max-lg:w-full max-lg:mt-0 max-lg:p-10">
+					<p className="text-wrap text-muted-foreground max-lg:hidden">
 						Finding work or talent should feel easy, not exhausting. That’s why
 						EaseJob connects you with the right people quickly, clearly, and
 						with zero fuss.
 					</p>
-					<Button asChild>
+					<Button size={"lg"} asChild className="max-lg:w-full">
 						<Link to="#">
 							Get Started
 							<LuMoveRight />
@@ -27,8 +28,8 @@ export function WhyEaseJob() {
 				</div>
 
 				{/**Right Items */}
-				<div className="grid grid-cols-2 gap-6 w-1/2 mx-auto">
-					<Card className="bg-primary gap-5 text-white max-w-80 ">
+				<div className="grid grid-cols-2 gap-6 w-1/2 mx-auto max-lg:grid-cols-1 max-lg:w-full">
+					<Card className="bg-primary gap-5 max-lg:order-2 text-white">
 						<CardHeader className="gap-5">
 							<CardTitle className="space-y-5">
 								<Group3Icon />
@@ -43,7 +44,7 @@ export function WhyEaseJob() {
 						</CardHeader>
 					</Card>
 					{/**right Items white */}
-					<Card className="gap-5 max-w-80 ">
+					<Card className="gap-5 max-lg:order-1 ">
 						<CardHeader className="gap-5">
 							<CardTitle className="space-y-5">
 								<Group3Icon />
@@ -57,7 +58,7 @@ export function WhyEaseJob() {
 							</CardContent>
 						</CardHeader>
 					</Card>
-					<Card className="gap-5 max-w-80 ">
+					<Card className="gap-5 max-lg:order-3 ">
 						<CardHeader className="gap-5">
 							<CardTitle className="space-y-5">
 								<Group3Icon />
@@ -71,7 +72,7 @@ export function WhyEaseJob() {
 							</CardContent>
 						</CardHeader>
 					</Card>
-					<Card className="gap-5 max-w-80 ">
+					<Card className="gap-5 max-lg:order-4">
 						<CardHeader className="gap-5">
 							<CardTitle className="space-y-5">
 								<Group3Icon />

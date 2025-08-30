@@ -1,7 +1,7 @@
 import React from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { SearchIcon } from "lucide-react";
+import { LuSearch } from "react-icons/lu";
 import { Command, CommandGroup, CommandItem } from "../ui/command";
 
 type SearchBarProps = React.ComponentProps<typeof Input> & {
@@ -40,7 +40,7 @@ export function SearchBar(props: SearchBarProps) {
 					type="submit"
 					className="absolute right-2 top-1/2 -translate-y-1/2"
 				>
-					<SearchIcon className="font-bold" />
+					<LuSearch className="font-bold" />
 					<div className="max-lg:hidden p-0 m-0 border-none">Search</div>
 				</Button>
 			</form>
@@ -61,7 +61,7 @@ export function SearchBar(props: SearchBarProps) {
 									}}
 									className="data-[selected=true]:bg-black/50 data-[selected=true]:text-white"
 								>
-									<SearchIcon color="white" /> {suggestion}
+									<LuSearch color="white" /> {suggestion}
 								</CommandItem>
 							</>
 						))}

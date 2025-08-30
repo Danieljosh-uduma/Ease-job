@@ -11,7 +11,7 @@ export function MobileMenu(props: navMenuProps) {
 		<Sheet open={isOpen} onOpenChange={onClickMenu}>
 			<SheetContent
 				side="top"
-				className="mt-14 [&>button]:hidden items-center w-full p-2"
+				className="mt-14 [&>button]:hidden items-center p-2"
 			>
 				<MenuItems isMobile />
 				<div className="flex flex-col gap-2 w-full">

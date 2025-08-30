@@ -73,10 +73,10 @@ export function HowWorkFlows() {
 
 	return (
 		<div className="w-[90%] max-w-7xl mx-auto space-y-14">
-			<h1 className="text-4xl font-semibold text-center">How It Works</h1>
+			<h1 className="text-4xl font-semibold text-center max-lg:text-2xl">How It Works</h1>
 
 			<Tabs defaultValue="job-seekers">
-				<TabsList className="mx-auto w-full max-w-2/5 bg-background border">
+				<TabsList className="mx-auto w-full max-w-2/5 bg-background border max-lg:max-w-full">
 					<TabsTrigger value="job-seekers" className={HowWorkflowTriggerStyle}>
 						Job Seekers
 					</TabsTrigger>
@@ -88,8 +88,8 @@ export function HowWorkFlows() {
 					</TabsTrigger>
 				</TabsList>
 
-				<TabsContent value="job-seekers" className="mt-5">
-					<ScrollArea className="w-full overflow-x-auto">
+				<TabsContent value="job-seekers" className="mt-5 overflow-hidden">
+					<ScrollArea className="w-full overflow-x-hidden">
 						<div className="flex justify-center items-center gap-4 whitespace-nowrap">
 							{employerItems.map((item, index) => (
 								<>
@@ -109,7 +109,7 @@ export function HowWorkFlows() {
 								</>
 							))}
 						</div>
-						<ScrollBar orientation="horizontal" />
+						<ScrollBar  orientation="horizontal" />
 					</ScrollArea>
 				</TabsContent>
 				<TabsContent value="employers/agents" className="mt-5">

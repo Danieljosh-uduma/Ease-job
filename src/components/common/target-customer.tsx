@@ -50,14 +50,14 @@ export function TargetCustomer() {
 
 	return (
 		<div className="relative flex flex-col items-center gap-7 w-full">
-			<h1 className="text-4xl font-semibold text-center">Built For You</h1>
+			<h1 className="text-4xl font-semibold text-center max-lg:text-2xl">Built For You</h1>
 			<Tabs
 				value={activeTab}
 				onValueChange={setActiveTab}
 				className="w-full max-w-7xl"
 			>
 				<div className="flex justify-center w-full mb-5">
-					<TabsList className="mx-auto w-1/2 max-w-3xl">
+					<TabsList className="mx-auto w-1/2 max-lg:w-11/12 max-w-3xl bg-warning-light">
 						<TabsTrigger value="employers">Employers</TabsTrigger>
 						<TabsTrigger value="job-seekers">Job Seekers</TabsTrigger>
 						<TabsTrigger value="agents">Agents</TabsTrigger>

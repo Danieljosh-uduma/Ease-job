@@ -16,20 +16,31 @@ export function TargetCustomerCard(props: TargetCustomerProps) {
 	return (
 		<Card
 			className={
-				"relative h-full max-h-[600px] max-w-7xl items-center justify-center m-auto"
+				"relative h-full max-h-[600px] max-lg:h-[400px] max-w-7xl items-center justify-center m-auto"
 			}
 		>
-			<div className="flex flex-col w-1/2 items-center text-white text-center text-wrap gap-8 h-full p-10 my-80 backdrop-blur-[2px] z-50 ">
+			<div className="flex flex-col w-1/2 max-lg:w-full items-center text-white text-center text-wrap gap-8 h-full p-10 my-80 backdrop-blur-[2px] z-50 ">
 				<CardTitle>
-					<h1 className="text-4xl">{title}</h1>
+					<h1 className="text-4xl max-lg:text-lg">{title}</h1>
 				</CardTitle>
-				<CardContent className="mx-auto">{description}</CardContent>
+				<CardContent className="mx-auto max-lg:text-xs">
+					{description}
+				</CardContent>
 				<CardFooter className="w-full">
 					<Button
 						variant={"secondary"}
 						size={"lg"}
 						onClick={goto}
-						className="w-1/2 mx-auto cursor-pointer"
+						className="mx-auto cursor-pointer max-lg:hidden"
+					>
+						Get Started
+						<LuMoveRight />
+					</Button>
+
+					<Button
+						variant={"secondary"}
+						onClick={goto}
+						className="mx-auto cursor-pointer hidden max-lg:flex"
 					>
 						Get Started
 						<LuMoveRight />
@@ -38,7 +49,7 @@ export function TargetCustomerCard(props: TargetCustomerProps) {
 			</div>
 
 			<img
-				src={getImageUrl(backgroundImg || "employers.png")}
+				src={getImageUrl(backgroundImg!)}
 				alt="test"
 				className="absolute w-full h-full object-cover object-top rounded-xl"
 			/>

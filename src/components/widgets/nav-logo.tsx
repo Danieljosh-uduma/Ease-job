@@ -14,9 +14,9 @@ export function NavLogo(props: navMenuProps) {
 		<div className="flex items-center gap-2 my-auto h-full">
 			<div className="p-1 hover:cursor-pointer" onClick={onClickMenu}>
 				{isOpen ? (
-					<LuX className="max-lg:block hidden" />
+					<LuX size={30}  className="max-lg:block hidden" />
 				) : (
-					<LuMenu className="hidden max-lg:block" />
+					<LuMenu size={30} className="hidden max-lg:block" />
 				)}
 			</div>
 			<MobileMenu isOpen={isOpen} onClickMenu={onClickMenu} />

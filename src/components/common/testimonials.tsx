@@ -45,7 +45,7 @@ export function Testimonials() {
 
 	return (
 		<div className="w-full mx-auto space-y-10 max-w-7xl bg-warning-light">
-			<h1 className="text-4xl font-semibold text-center p-5">
+			<h1 className="text-4xl font-semibold text-center p-5 max-lg:text-2xl">
 				Trusted by Thousands Here’s Why
 			</h1>
 
