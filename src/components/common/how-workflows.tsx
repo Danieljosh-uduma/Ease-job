@@ -11,10 +11,10 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import WorkflowIcon1 from "@/assets/Work-flow-icon-1.svg?react";
-import WorkflowIcon2 from "@/assets/Work-flow-icon-2.svg?react";
-import WorkflowIcon3 from "@/assets/Work-flow-icon-3.svg?react";
-import WorkflowIcon4 from "@/assets/Work-flow-icon-4.svg?react";
+import WorkflowIcon1 from "@/assets/work-flow-icon-1.svg?react";
+import WorkflowIcon2 from "@/assets/work-flow-icon-2.svg?react";
+import WorkflowIcon3 from "@/assets/work-flow-icon-3.svg?react";
+import WorkflowIcon4 from "@/assets/work-flow-icon-4.svg?react";
 import Arrow5 from "@/assets/Arrow5.svg?react";
 import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 import { motion } from "motion/react";
