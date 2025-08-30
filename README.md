@@ -1,70 +1,63 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 # Ease-job
+
+## Project Structure
+
+This is an example structure of project describing the folder structure.
+
+```text
+
+my-app/
+├─ public/
+│  └─ favicon.ico
+│
+├─ src/
+│  ├─ assets/               # static files: images, fonts, icons
+│  │  └─ logo.svg
+│  │
+│  ├─ components/           # shared, reusable pieces
+│  │  ├─ common/            # app-specific wrappers & layouts
+│  │  │  ├─ Navbar.tsx
+│  │  │  ├─ Footer.tsx
+│  │  │  └─ index.ts
+│  │  │
+│  │  ├─ layout/            # page scaffolding
+│  │  │  ├─ RootLayout.tsx
+│  │  │  ├─ Sidebar.tsx
+│  │  │  └─ index.ts
+│  │  │
+│  │  ├─ ui/                # auto-generated shadcn/ui components
+│  │  │  └─ (…all shadcn/ui files…)
+│  │  │
+│  │  └─ widgets/           # small, generic widgets
+│  │     ├─ UserAvatar.tsx
+│  │     └─ index.ts
+│  │
+│  ├─ hooks/                # custom React hooks
+│  │  ├─ useAuth.ts
+│  │  └─ useDebounce.ts
+│  │
+│  ├─ pages/                # route entry points
+│  │  ├─ HomePage.tsx       # mapped to "/"
+│  │  ├─ AboutPage.tsx      # mapped to "/about"
+│  │  ├─ Dashboard/         # nested group for dashboard routes
+│  │  │  ├─ DashboardIndex.tsx
+│  │  │  └─ SettingsPage.tsx
+│  │  │
+│  │  └─ NotFoundPage.tsx
+│  ├─ redux/                # redux components and config
+│  │    └─ (…all redux files)
+│  ├─ router/               # global routing setup & config
+│  │  └─ index.tsx
+│  │
+│  ├─ utils/                # pure helper functions
+│  │  └─ formatDate.ts
+│  │
+│  ├─ App.tsx               # app root: routes, context providers
+|  ├─ index.css             # Global tailwind config and theme setup
+│  └─ main.tsx              # ReactDOM.render + global styles
+│
+├─ tsconfig.json
+├─ package.json
+└─ vite.config.ts
+```
