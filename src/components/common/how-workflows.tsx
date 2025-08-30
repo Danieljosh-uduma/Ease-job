@@ -17,6 +17,7 @@ import WorkflowIcon3 from "@/assets/Work-flow-icon-3.svg?react";
 import WorkflowIcon4 from "@/assets/Work-flow-icon-4.svg?react";
 import Arrow5 from "@/assets/Arrow5.svg?react";
 import { ScrollArea, ScrollBar } from "../ui/scroll-area";
+import { motion } from "motion/react";
 
 export function HowWorkFlows() {
 	type workflowItemsTypes = {
@@ -73,7 +74,9 @@ export function HowWorkFlows() {
 
 	return (
 		<div className="w-[90%] max-w-7xl mx-auto space-y-14">
-			<h1 className="text-4xl font-semibold text-center max-lg:text-2xl">How It Works</h1>
+			<h1 className="text-4xl font-semibold text-center max-lg:text-2xl">
+				How It Works
+			</h1>
 
 			<Tabs defaultValue="job-seekers">
 				<TabsList className="mx-auto w-full max-w-2/5 bg-background border max-lg:max-w-full">
@@ -90,7 +93,12 @@ export function HowWorkFlows() {
 
 				<TabsContent value="job-seekers" className="mt-5 overflow-hidden">
 					<ScrollArea className="w-full overflow-x-hidden">
-						<div className="flex justify-center items-center gap-4 whitespace-nowrap">
+						<motion.div
+							initial={{ opacity: 0, x: 100 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 1 }}
+							className="flex justify-center items-center gap-4 whitespace-nowrap"
+						>
 							{employerItems.map((item, index) => (
 								<>
 									<Card className="flex w-[237px] h-[225px]">
@@ -108,13 +116,18 @@ export function HowWorkFlows() {
 									{index !== employerItems.length - 1 && <Arrow5 />}
 								</>
 							))}
-						</div>
-						<ScrollBar  orientation="horizontal" />
+						</motion.div>
+						<ScrollBar orientation="horizontal" />
 					</ScrollArea>
 				</TabsContent>
 				<TabsContent value="employers/agents" className="mt-5">
 					<ScrollArea className="w-full overflow-x-auto">
-						<div className="flex justify-center items-center gap-4 whitespace-nowrap">
+						<motion.div
+							initial={{ opacity: 0, x: 100 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 1 }}
+							className="flex justify-center items-center gap-4 whitespace-nowrap"
+						>
 							{jobSeekerItems.map((item, index) => (
 								<>
 									<Card className="flex w-[237px] h-[225px]">
@@ -132,7 +145,7 @@ export function HowWorkFlows() {
 									{index !== jobSeekerItems.length - 1 && <Arrow5 />}
 								</>
 							))}
-						</div>
+						</motion.div>
 						<ScrollBar orientation="horizontal" />
 					</ScrollArea>
 				</TabsContent>

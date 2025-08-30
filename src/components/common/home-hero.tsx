@@ -26,7 +26,7 @@ export function HomeHero() {
 			/>
 			<div className="flex flex-col w-4/5 mx-auto h-full">
 				<div className="flex w-full mx-auto  backdrop-blur-[2px] p-14 mb-auto max-lg:p-6">
-					<h1 className="w-full max-w-6xl text-5xl text-center drop-shadow-2xl drop-shadow-black text-wrap font-bold text-white max-lg:font-bold max-lg:text-2xl">
+					<h1 className="w-full max-w-6xl text-5xl text-center drop-shadow-xs drop-shadow-black text-wrap font-bold text-white max-lg:font-bold max-lg:text-2xl">
 						Connecting Talent, Employers, and <br className="max-lg:hidden" />
 						Trusted Agents. All in One Place
 					</h1>

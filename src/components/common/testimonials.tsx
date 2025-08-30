@@ -8,7 +8,7 @@ export function Testimonials() {
 	const items: string[] = Array.from({ length: 12 }, (_, i) => `Item ${i + 1}`);
 	const [ref, { width }] = useMeasure();
 
-	const FAST_DURATION = 10;
+	const FAST_DURATION = 5;
 	const SLOW_DURATION = 75;
 
 	const [duration, setDuration] = useState(FAST_DURATION);
@@ -19,7 +19,7 @@ export function Testimonials() {
 
 	useEffect(() => {
 		let controls;
-		const finalPosition = -width / 2 - 8;
+		const finalPosition = -width / 2 -12;
 
 		if (mustFinish) {
 			controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
@@ -44,7 +44,7 @@ export function Testimonials() {
 	}, [rerender, xTranslation, duration, width, mustFinish]);
 
 	return (
-		<div className="w-full mx-auto space-y-10 max-w-7xl bg-warning-light">
+		<div className="w-full mx-auto space-y-10 max-w-[1440px] bg-warning-light">
 			<h1 className="text-4xl font-semibold text-center p-5 max-lg:text-2xl">
 				Trusted by Thousands Here’s Why
 			</h1>
@@ -64,7 +64,7 @@ export function Testimonials() {
 					className="grid grid-rows-2 grid-flow-col gap-4"
 				>
 					{[...items, ...items].map((i) => (
-						<Card key={i} className="w-56 max-w-xs">
+						<Card key={i} className="w-96 max-lg:w-80">
 							<CardContent className="">
 								<p>
 									"I finally get gigs that actually match my skills. Makes my

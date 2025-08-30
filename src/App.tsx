@@ -3,11 +3,14 @@
 import "./App.css";
 import { ThemeProvider } from "@/contexts/theme-provider";
 import AppRouter from "./router";
+import { AnimatePresence } from "motion/react";
 
 function App() {
 	return (
 		<ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-			<AppRouter />
+			<AnimatePresence>
+				<AppRouter />
+			</AnimatePresence>
 		</ThemeProvider>
 	);
 }

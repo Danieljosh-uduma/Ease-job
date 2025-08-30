@@ -21,9 +21,9 @@ export function TargetCustomerCard(props: TargetCustomerProps) {
 		>
 			<div className="flex flex-col w-1/2 max-lg:w-full items-center text-white text-center text-wrap gap-8 h-full p-10 my-80 backdrop-blur-[2px] z-50 ">
 				<CardTitle>
-					<h1 className="text-4xl max-lg:text-lg">{title}</h1>
+					<h1 className="text-4xl max-lg:text-lg drop-shadow-xs drop-shadow-black ">{title}</h1>
 				</CardTitle>
-				<CardContent className="mx-auto max-lg:text-xs">
+				<CardContent className="mx-auto max-lg:text-xs drop-shadow-xs drop-shadow-black">
 					{description}
 				</CardContent>
 				<CardFooter className="w-full">

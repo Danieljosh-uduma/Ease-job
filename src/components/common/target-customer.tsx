@@ -1,13 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { TargetCustomerCard } from "@/components/widgets";
-
-
+import { AnimatePresence, motion } from "motion/react";
 
 export function TargetCustomer() {
-	const tabList = useMemo<string[]>(() => ["employers", "job-seekers", "agents"],[]);
+	const tabList = useMemo<string[]>(
+		() => ["employers", "job-seekers", "agents"],
+		[]
+	);
 	const [activeTab, setActiveTab] = useState<string>(tabList[0]);
-	const tabContentList = useMemo(() => [
+	const tabContentList = useMemo(
+		() => [
 			{
 				value: tabList[0],
 				title: "Hire the Right Talent Fast.",
@@ -43,14 +46,15 @@ export function TargetCustomer() {
 				const nextIndex = (currentIndex + 1) % tabList.length;
 				return tabList[nextIndex];
 			});
-		}, 3000);
+		}, 5000);
 		return () => clearInterval(interval);
 	}, [tabList]);
 
-
 	return (
 		<div className="relative flex flex-col items-center gap-7 w-full">
-			<h1 className="text-4xl font-semibold text-center max-lg:text-2xl">Built For You</h1>
+			<h1 className="text-4xl font-semibold text-center max-lg:text-2xl">
+				Built For You
+			</h1>
 			<Tabs
 				value={activeTab}
 				onValueChange={setActiveTab}
@@ -63,20 +67,32 @@ export function TargetCustomer() {
 						<TabsTrigger value="agents">Agents</TabsTrigger>
 					</TabsList>
 				</div>
-				{tabContentList.map((item, index) => (
-					<TabsContent
-						key={item.value + index}
-						value={item.value}
-						className="w-full"
-					>
-						<TargetCustomerCard
-							title={item.title}
-							description={item.description}
-							backgroundImg={item.backgroundImg}
-							goto={item.goto}
-						/>
-					</TabsContent>
-				))}
+
+				{tabContentList.map(
+					(item, index) =>
+						activeTab == item.value && (
+							<motion.div
+								key={item.value}
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.5, ease: "easeInOut" }}
+							>
+								<TabsContent
+									key={item.value + index}
+									value={item.value}
+									className="w-full"
+									forceMount
+								>
+									<TargetCustomerCard
+										title={item.title}
+										description={item.description}
+										backgroundImg={item.backgroundImg}
+										goto={item.goto}
+									/>
+								</TabsContent>
+							</motion.div>
+						)
+				)}
 			</Tabs>
 		</div>
 	);
