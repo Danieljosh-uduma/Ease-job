@@ -17,7 +17,7 @@ export function MenuItems({ isMobile = false }: isMobileProp) {
 	return (
 		<>
 			{isMobile ? (
-				<NavigationMenu>
+				<NavigationMenu orientation="vertical" viewport={false}>
 					<NavigationMenuList className="flex-col">
 						<NavigationMenuItem>
 							<NavigationMenuLink
@@ -37,16 +37,10 @@ export function MenuItems({ isMobile = false }: isMobileProp) {
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuTrigger>Hire a Talent</NavigationMenuTrigger>
-							<NavigationMenuContent>
-								<div className="relative grid w-[200px] gap-4 z-[1000]">
+							<NavigationMenuContent className="h-fit z-50">
+								<div className="relative grid w-[200px] gap-4">
 									<NavigationMenuLink asChild>
-										<Link to="#">Item 1</Link>
-									</NavigationMenuLink>
-									<NavigationMenuLink asChild>
-										<Link to="#">Item 2</Link>
-									</NavigationMenuLink>
-									<NavigationMenuLink asChild>
-										<Link to="#">Item 3</Link>
+										<Link to="#">Post a Job</Link>
 									</NavigationMenuLink>
 								</div>
 							</NavigationMenuContent>
@@ -83,19 +77,11 @@ export function MenuItems({ isMobile = false }: isMobileProp) {
 						<NavigationMenuItem>
 							<NavigationMenuTrigger>Hire a Talent</NavigationMenuTrigger>
 							<NavigationMenuContent>
-								<ul className="grid w-[200px] gap-4">
-									<li>
-										<NavigationMenuLink asChild>
-											<Link to="#">Item 1</Link>
-										</NavigationMenuLink>
-										<NavigationMenuLink asChild>
-											<Link to="#">Item 2</Link>
-										</NavigationMenuLink>
-										<NavigationMenuLink asChild>
-											<Link to="#">Item 3</Link>
-										</NavigationMenuLink>
-									</li>
-								</ul>
+								<div className="relative grid w-[200px] gap-4 z-[1000]">
+									<NavigationMenuLink asChild>
+										<Link to="#">Post a Job</Link>
+									</NavigationMenuLink>
+								</div>
 							</NavigationMenuContent>
 						</NavigationMenuItem>
 						<NavigationMenuItem>

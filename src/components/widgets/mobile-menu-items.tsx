@@ -1,4 +1,10 @@
-import { Sheet, SheetContent } from "../ui/sheet";
+import {
+	Sheet,
+	SheetContent,
+	SheetDescription,
+	SheetHeader,
+	SheetTitle,
+} from "../ui/sheet";
 import type { navMenuProps } from "./nav-logo";
 import { MenuItems } from "./menu-Items";
 import { Button } from "../ui/button";
@@ -13,6 +19,11 @@ export function MobileMenu(props: navMenuProps) {
 				side="top"
 				className="mt-14 [&>button]:hidden items-center p-2"
 			>
+				<SheetHeader className="hidden">
+					<SheetTitle>Nav menu</SheetTitle>
+					<SheetDescription>navigation menu items</SheetDescription>
+				</SheetHeader>
+
 				<MenuItems isMobile />
 				<div className="flex flex-col gap-2 w-full">
 					<Button variant="ghost" className="w-full">
