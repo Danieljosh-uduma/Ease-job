@@ -9,6 +9,7 @@ import {
 	SiLinkedin,
 	SiTelegram,
 } from "react-icons/si";
+import { Link } from "react-router";
 export function Footer() {
 	return (
 		<div className="bg-accent p-20 max-lg:p-10 space-y-20">
@@ -34,8 +35,8 @@ export function Footer() {
 						</div>
 					</form>
 				</div>
-				<div className="grid gap-5 text-muted-foreground h-fit whitespace-nowrap">
-					<p className="mb-5 font-semibold text-2xl text-muted-foreground/50">
+				<div className="grid gap-5 text-muted-foreground text-[14px] h-fit whitespace-nowrap">
+					<p className="mb-5 font-semibold text-muted-foreground/50">
 						COMPANY
 					</p>
 					<p>About</p>
@@ -44,16 +45,16 @@ export function Footer() {
 					<p>Terms & Conditions</p>
 					<p>Privacy Policy</p>
 				</div>
-				<div className="grid gap-5 text-muted-foreground h-fit whitespace-nowrap">
-					<p className="mb-5 font-semibold text-2xl text-muted-foreground/50">
+				<div className="grid gap-5 text-muted-foreground text-[14px] h-fit whitespace-nowrap">
+					<p className="mb-5 font-semibold text-muted-foreground/50">
 						SOLUTIONS
 					</p>
 					<p>Find a Job</p>
 					<p>Post a Job</p>
 					<p>How it works</p>
 				</div>
-				<div className="grid gap-5 text-muted-foreground h-fit whitespace-nowrap">
-					<p className="mb-5 font-semibold text-2xl text-muted-foreground/50">
+				<div className="grid gap-5 text-muted-foreground text-[14px] h-fit whitespace-nowrap">
+					<p className="mb-5 font-semibold text-muted-foreground/50">
 						CONTACT US
 					</p>
 					<p>EaseJob@gmail.com</p>
@@ -61,20 +62,28 @@ export function Footer() {
 				</div>
 			</div>
 			<div className="flex bg-accent gap-3 max-w-7xl whitespace-nowrap max-lg:flex-col items-center max-lg:items-start">
-				<div className="flex gap-2 items-center">
+				<Link to={"/"} className="flex gap-2 items-center">
 					<Logo width={36} height={36} />
 					<p className="text-primary text-2xl font-semibold">Ease Job</p>
-				</div>
+				</Link>
 
 				<p className="max-lg:w-full text-end text-muted-foreground text-xs max-lg:text-left">
 					&copy; 2025 Ease Job. All rights reserved
 				</p>
 
 				<div className="flex gap-4 ml-auto max-lg:ml-0 text-primary ">
-					<SiFacebook />
-					<SiInstagram />
-					<SiLinkedin />
-					<SiTelegram />
+					<Link to={"#"}>
+						<SiFacebook />
+					</Link>
+					<Link to={"#"}>
+						<SiInstagram />
+					</Link>
+					<Link to={"#"}>
+						<SiLinkedin />
+					</Link>
+					<Link to={"#"}>
+						<SiTelegram />
+					</Link>
 				</div>
 			</div>
 		</div>

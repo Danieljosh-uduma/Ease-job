@@ -3,10 +3,18 @@ import svgr from 'vite-plugin-svgr'
 import path from "path"
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), svgr()],
+  plugins: [react(), tailwindcss(), svgr(), ViteImageOptimizer({
+    jpg:{
+      quality:50
+    },
+    png:{
+      quality:50
+    }
+  })],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
