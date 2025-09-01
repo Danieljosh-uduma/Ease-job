@@ -91,7 +91,7 @@ export function HowWorkFlows() {
 					</TabsTrigger>
 				</TabsList>
 
-				<TabsContent value="job-seekers" className="mt-5 overflow-hidden">
+				<TabsContent value="employers/agents" className="mt-5 overflow-hidden">
 					<ScrollArea className="w-full overflow-x-hidden">
 						<motion.div
 							initial={{ opacity: 0, x: 100 }}
@@ -100,8 +100,8 @@ export function HowWorkFlows() {
 							className="flex justify-center items-center gap-4 whitespace-nowrap"
 						>
 							{employerItems.map((item, index) => (
-								<>
-									<Card className="flex w-[237px] h-[225px]">
+								<div key={"w1" + index}>
+									<Card  className="flex w-[237px] h-[225px]">
 										<CardHeader>
 											<CardTitle className="flex flex-col items-center gap-10">
 												{item.icon}
@@ -114,13 +114,13 @@ export function HowWorkFlows() {
 									</Card>
 
 									{index !== employerItems.length - 1 && <Arrow5 />}
-								</>
+								</div>
 							))}
 						</motion.div>
 						<ScrollBar orientation="horizontal" />
 					</ScrollArea>
 				</TabsContent>
-				<TabsContent value="employers/agents" className="mt-5">
+				<TabsContent value="job-seekers" className="mt-5">
 					<ScrollArea className="w-full overflow-x-auto">
 						<motion.div
 							initial={{ opacity: 0, x: 100 }}
@@ -129,8 +129,8 @@ export function HowWorkFlows() {
 							className="flex justify-center items-center gap-4 whitespace-nowrap"
 						>
 							{jobSeekerItems.map((item, index) => (
-								<>
-									<Card className="flex w-[237px] h-[225px]">
+								<div key={"w2" + index}>
+									<Card  className="flex w-[237px] h-[225px]">
 										<CardHeader>
 											<CardTitle className="flex flex-col items-center gap-10">
 												{item.icon}
@@ -143,7 +143,7 @@ export function HowWorkFlows() {
 									</Card>
 
 									{index !== jobSeekerItems.length - 1 && <Arrow5 />}
-								</>
+								</div>
 							))}
 						</motion.div>
 						<ScrollBar orientation="horizontal" />

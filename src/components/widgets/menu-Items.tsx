@@ -14,7 +14,6 @@ type isMobileProp = {
 };
 
 export function MenuItems({ isMobile = false }: isMobileProp) {
-	console.log("isMobile: ", isMobile);
 	return (
 		<>
 			{isMobile ? (
