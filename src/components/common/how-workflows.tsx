@@ -91,17 +91,20 @@ export function HowWorkFlows() {
 					</TabsTrigger>
 				</TabsList>
 
-				<TabsContent value="job-seekers" className="mt-5 overflow-hidden">
-					<ScrollArea className="w-full overflow-x-hidden">
+				<TabsContent value="employers/agents" className="mt-5 overflow-hidden">
+					<ScrollArea className="w-full">
 						<motion.div
 							initial={{ opacity: 0, x: 100 }}
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1 }}
-							className="flex justify-center items-center gap-4 whitespace-nowrap"
+							className="flex gap-4 px-1"
 						>
 							{employerItems.map((item, index) => (
-								<>
-									<Card className="flex w-[237px] h-[225px]">
+								<div
+									key={"w1" + index}
+									className="flex items-center gap-4 whitespace-nowrap"
+								>
+									<Card className="w-[237px] h-[225px]">
 										<CardHeader>
 											<CardTitle className="flex flex-col items-center gap-10">
 												{item.icon}
@@ -114,23 +117,23 @@ export function HowWorkFlows() {
 									</Card>
 
 									{index !== employerItems.length - 1 && <Arrow5 />}
-								</>
+								</div>
 							))}
 						</motion.div>
 						<ScrollBar orientation="horizontal" />
 					</ScrollArea>
 				</TabsContent>
-				<TabsContent value="employers/agents" className="mt-5">
-					<ScrollArea className="w-full overflow-x-auto">
+				<TabsContent value="job-seekers" className="mt-5">
+					<ScrollArea className="w-full">
 						<motion.div
 							initial={{ opacity: 0, x: 100 }}
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1 }}
-							className="flex justify-center items-center gap-4 whitespace-nowrap"
+							className="flex gap-4 px-1"
 						>
 							{jobSeekerItems.map((item, index) => (
-								<>
-									<Card className="flex w-[237px] h-[225px]">
+								<div key={"w2" + index} className="flex items-center gap-4 whitespace-nowrap">
+									<Card className="w-[237px] h-[225px]">
 										<CardHeader>
 											<CardTitle className="flex flex-col items-center gap-10">
 												{item.icon}
@@ -143,7 +146,7 @@ export function HowWorkFlows() {
 									</Card>
 
 									{index !== jobSeekerItems.length - 1 && <Arrow5 />}
-								</>
+								</div>
 							))}
 						</motion.div>
 						<ScrollBar orientation="horizontal" />
