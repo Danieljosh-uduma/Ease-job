@@ -51,12 +51,12 @@ function SignUp1() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Header */}
       <header>
-        <div className="flex items-center gap-3 px-6 py-4">
+        <div className="flex items-center gap-6 px-10 py-8">
           <button onClick={handleBack} className=" hover:text-gray-700">
-            <LuMoveLeft size={20} />
+            <LuMoveLeft size={24} />
           </button>
           <div className="flex items-center gap-2">
             <AppLogo />
@@ -71,7 +71,7 @@ function SignUp1() {
         </h1>
       </div>
       {/* Role Selection Grid */}
-      <div className="grid grid-cols-3 gap-4 mb-10 max-w-2xl mx-auto">
+      <div className="grid grid-cols-3 gap-4 mb-10 max-w-3xl mx-auto">
         {roles.map((role) => (
           <SignUp1Item
             key={role.id}
