@@ -27,7 +27,7 @@ function SignUp1Item({
       {/* 📱 Mobile Version (visible only on small screens) */}
       <div
         onClick={() => onSelect(id)}
-        className={`cursor-pointer transition-all duration-200 border rounded-lg p-4 mb-3 block md:hidden
+        className={`cursor-pointer transition-all duration-200 border rounded-lg p-2.5 mb-3 block md:hidden
           ${
             selected
               ? "bg-[#F0FDF4] border-[#136443]"
