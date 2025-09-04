@@ -1,14 +1,11 @@
-import { FC } from "react";
 import type { Job } from "@/types/Job";
-import s1 from "../assets/s1.svg";
-import s2 from "../assets/s2.svg";
-import s3 from "../assets/s3.svg";
 import s4 from "../assets/s4.svg";
-import s5 from "../assets/s5.svg";
+import s5 from "../assets/MapPin.svg";
 import s6 from "../assets/s6.svg";
 import s7 from "../assets/s7.svg";
 import s8 from "../assets/s8.svg";
 import { Button } from "./ui/button";
+import { FaArrowRight } from "react-icons/fa";
 
 interface JobProps {
   job: Job;
@@ -16,7 +13,7 @@ interface JobProps {
 
 const JobCard: React.FC<JobProps> = ({ job }) => {
   return (
-    <div className="flex flex-col justify-center items-center gap-[16px] md:gap-[20px]  shadow-2xl p-[24px] md:px-[40px]  rounded-[12px] w-[100%] md:w-[380px] h-[270px] md:h-[326px] mx-auto ">
+    <div className=" flex flex-col justify-center items-center gap-[16px] md:gap-[20px]  shadow-2xl p-[24px] md:px-[40px]  rounded-[12px] w-[100%] md:w-[380px] h-[270px] md:h-[326px] mx-auto ">
       <div className="flex justify-between items-center w-[332px] h-[28px]  ">
         <h4 className="w-fit h-[28px] rounded-sm p-[4px] text-destructive bg-[#f8f9fa]">
           {job.type}
@@ -33,13 +30,14 @@ const JobCard: React.FC<JobProps> = ({ job }) => {
             {job.company}
           </p>
         </div>
+        <div className="flex items-start self-start gap-2 w-[237px] h-[20px] pt-1 ">
+          <img className="w-[16px] h-[16px] " src={s6} alt="icon" />
+          <p className=" w-[211px] h-[20px] font-[400] text[14px] leading-[20px] text-card-foreground ">
+            {job.salary}
+          </p>
+        </div>
       </div>
-      <div className="flex items-start self-start gap-2 w-[237px] h-[20px] ">
-        <img className="w-[16px] h-[16px] " src={s6} alt="icon" />
-        <p className=" w-[211px] h-[20px] font-[400] text[14px] leading-[20px] text-card-foreground ">
-          {job.salary}
-        </p>
-      </div>
+
       <div className="w-[100%] h-[78px] md:w-[332px] md:h-[62px] flex flex-col gap-[16px] md:gap-0  ">
         <div className="flex items-center gap-[8px] w-[140px] h-[22px]">
           <img className="w-[16px] h-[16px] " src={s5} alt="icon" />
@@ -49,10 +47,10 @@ const JobCard: React.FC<JobProps> = ({ job }) => {
         </div>
         <Button
           asChild
-          className="flex items-center justify-center gap-[10px] bg-secondary w-[100%] md:w-[105px] h-[40px] md:h-[40px] md:self-end  "
+          className="cursor-pointer flex items-center justify-center gap-[10px] bg-secondary w-[100%] md:w-[105px] h-[40px] md:h-[40px] md:self-end  "
         >
           <span className="w-[49px] h-[24px] font-[400] text-[16px] leading-[24px] ">
-            Apply <img className="w-[24px] h-[24px] " src={s4} alt="icon" />
+            Apply <FaArrowRight className="w-[24px] h-[24px] " />
           </span>
         </Button>
       </div>
