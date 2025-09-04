@@ -4,8 +4,8 @@ import JobCard from "@/components/JobCard";
 import { getJobs } from "../services/jobServices";
 import { RootLayout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
-import s1 from '../assets/s1.svg'
 import SearchBar from "@/components/JobSearchBar";
+import { FaArrowRight } from "react-icons/fa";
 
 const JobSearchResults = () => {
   const [jobResults, setJobResults] = useState<Job[]>([]);
@@ -16,6 +16,7 @@ const JobSearchResults = () => {
     const fetchJobs = async () => {
       try {
         const jobs = await getJobs();
+
         setJobResults(jobs);
         console.log("Jobs:", jobs);
       } catch (err) {
@@ -29,7 +30,7 @@ const JobSearchResults = () => {
     fetchJobs();
   }, []);
 
-  if (loading) return <p className="p-6">Loading jobs...</p>;
+  if (loading) return <p className="p-6">Loading jobs...Please wait</p>;
   if (error) return <p className="p-6 text-red-500">{error}</p>;
 
   return (
@@ -53,7 +54,7 @@ const JobSearchResults = () => {
           >
             <span className=" font-[400] text-[12.83px] md:text-[16px] leading-[24px] !text-foreground ">
               Apply Now
-              <img className="w-[19.24px] h-[19.24px] md:w-[24px] md:h-[24px] " src={s1} alt="icon" />
+              <FaArrowRight className="text-[#000]" />
             </span>
           </Button>
         </div>

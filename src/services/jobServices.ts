@@ -16,7 +16,7 @@ export const createJob = async (job: Omit<Job, "_id">): Promise<Job> => {
 export const getJobs = async (): Promise<Job[]> => {
   const res = await fetch(JOB_API_URL);
 
-  if (!res.ok) throw new Error("Soory! Failed to fetch jobs 🥺");
+  if (!res.ok) throw new Error("Soory! Failed to fetch jobs 🥺");  
 
   const data = await res.json();
   console.log("Jobs: ", data);
