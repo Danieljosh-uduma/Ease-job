@@ -39,8 +39,10 @@ function SignUp1Item({
           {/* Radio button */}
           <div className="flex-shrink-0 mr-3">
             <div
-              className={`w-5 h-5 rounded-full border-2 flex items-center justify-center
+              className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors
               ${selected ? " border-[#136443]" : "border-[#B8B8B8]"}
+                  hover:border-[#136443] hover:shadow-sm
+
             `}
             >
               {selected && (
