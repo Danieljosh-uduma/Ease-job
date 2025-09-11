@@ -2,9 +2,11 @@
 
 
 import { Navbar } from "@/components/common";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
-// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
+import { SlOptions } from "react-icons/sl";
 
 export default function SignUp() {
   // Replace these with your actual primary and secondary color classes or hex codes
@@ -35,7 +37,7 @@ export default function SignUp() {
       <div className="flex flex-row gap-15 w-full max-w-5xl h-auto p-1 rounded-lg items-center m-auto mt-10 box-border">
 
         {/* Left Section */}
-        <div className="flex-1 flex flex-col bg-primary items-center justify-center rounded-sm p-5  justify-between h-full gap-20 pt-15 pb-15 box-border max-w-md sm:hidden xs:hidden">
+        <div className="flex-1 flex flex-col bg-primary items-center justify-center rounded-sm p-5  justify-between h-full gap-20 pt-15 pb-15 box-border  max-lg:hidden">
           <div className="firstDesc flex flex-col gap-20">
             <div className="firDesc1">
               <h2 className={`text-2xl font-bold ${secondaryText} text-left w-80 mb-6`}>The simplest way to get suitable jobs</h2>
@@ -46,13 +48,13 @@ export default function SignUp() {
               <img src='./src/assets/userCourage.jpg' alt="User profile" className="h-10 w-10 rounded-4xl" />
               <p className="text-white text-2xs w-80">“EaseJob helped me land verified jobs faster than anywhere else. It felt safe, simple, and real.”</p>
 
-              <div className="treack bg-green-600">
-                <p className="text-white font-semibold text-xs">Paul M. Nwodo</p>
-                <p className="text-white text-xs">Software Developer</p>
+              <div className="flex flex-col">
+                <p className="text-white font-semibold text-lg">Paul M. Nwodo</p>
+                <p className="text-white text-sm">Software Developer</p>
               </div>
             </div>
             <div className="dots">
-              <h1>hello world</h1>
+              <SlOptions className="text-white" />
             </div>
           </div>
         </div>
@@ -69,16 +71,16 @@ export default function SignUp() {
             </p>
           </div>
           <form action="submit" className="flex flex-col justify-center w-full h-auto box-center box-border m-auto">
-            <label htmlFor="Fullname" className="text-md mb-">Full Name</label>
-            <input type="text" id="Fullname" placeholder="Enter your full Name" className="border p-1 mb-4 rounded box-border mb-7 text-sm text-gray-220" />
+            <label htmlFor="Fullname" className="text-md">Full Name</label>
+            <input type="text" id="Fullname" placeholder="Enter your full Name" className="border p-1 py-1 px-2 mb-4 rounded-md box-border mb-7 text-sm text-gray-220" />
 
             <label htmlFor="email">Email</label>
-            <input type="text" id="email" placeholder="Enter your email" className="border p-1 mb-1 rounded box-border mb-7" />
+            <input type="text" id="email" placeholder="Enter your email" className="border p-1 py-1 px-2 mb-1 rounded-md box-border mb-7" />
 
             <label htmlFor="Password">Password</label>
             <input type={showPassword ? "text" : "password"}
             placeholder="*********"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-1 px-2 border rounded-md"
             />
             <label htmlFor="terms" className="flex items-center mb-4 text-xs">
               <input type="checkbox" id="terms" className="mr-2 my-5" />
@@ -87,7 +89,7 @@ export default function SignUp() {
                and &nbsp;
               <a href="/conditions" className="text-secondary hover:underline">conditions</a>
             </label>
-            <button type="submit" className={`py-2 text-20 rounded ${primary} ${primaryText} bg-primary font-md hover:bg-secondary text-white`}>
+            <button type="submit" className={`py-1 px-2 text-20 rounded ${primary} ${primaryText} bg-primary font-md hover:bg-secondary text-white`}>
               Sign Up
             </button>
             <div className="downSection w-full flex flex-col mt-7 box-border box-center  items-center gap-10">
@@ -100,8 +102,8 @@ export default function SignUp() {
               </div>
 
               <div className="signupSocials w-full flex justify-between px-2">
-                <div className="google w-50 text-center border-1 rounded-[100px] border-gray-600 hover:bg-blue-100 hover:border-2">Google</div>
-                <div className="facebook w-50 text-center border-1 rounded-[100px] border-gray-600 hover:bg-blue-100 hover:border-2">Facebook</div>
+                <Button className="google w-50 text-center border-1 rounded-[100px] border-gray-600 bg-unset hover:bg-blue-100 hover:border-2"><FcGoogle /></Button>
+                <Button className="w-50 text-center border-1 rounded-[100px]  bg-unset text-blue-600 border-gray-600 hover:bg-blue-100 hover:border-2 font-3"><FaFacebook /></Button>
               </div>
             </div>
           </form>
