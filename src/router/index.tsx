@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import JobSearchResults from "@/pages/JobSearchResults";
 import TalentSearchResults from "@/pages/TalentSearchResults";
 import SignUp from "@/pages/sign-up2";
+import Login from "@/pages/login";
 
 export default function AppRouter() {
   const router = createBrowserRouter([
@@ -12,7 +13,7 @@ export default function AppRouter() {
     },
     {
       path: "/login",
-      element: <div>Login Page</div>,
+      element: <Login />,
     },
     {
       path: "/sign-up2",

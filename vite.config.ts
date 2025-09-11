@@ -5,8 +5,16 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
+
+
+
 // https://vite.dev/config/
 export default defineConfig({
+  // server: {
+  //   port: 3000,
+  //   open: true,
+  //   cors: true,
+  // },
   plugins: [react(), tailwindcss(), svgr(), ViteImageOptimizer({
     jpg:{
       quality:50
