@@ -6,6 +6,7 @@ import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { SlOptions } from "react-icons/sl";
+import '../pages/animations/animations.css';
 
 export default function SignUp() {
   // Replace these with your actual primary and secondary color classes or hex codes
@@ -33,10 +34,10 @@ export default function SignUp() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-row gap-15 w-full max-w-5xl h-auto p-1 rounded-lg items-center m-auto mt-10 box-border max-lg:min-w-100 max-lg:h-auto max-lg:m-auto items-center max-lg:max-w-100">
+      <div className="flex flex-row gap-15 w-full max-w-5xl h-auto p-1 rounded-lg items-center m-auto mt-10 box-border max-lg:min-w-100 max-lg:h-auto max-lg:m-auto items-center max-lg:max-w-100 Fadein">
 
         {/* Left Section */}
-        <div className="flex-1 flex flex-col bg-primary items-center justify-center rounded-sm p-5  justify-between h-full gap-20 pt-15 pb-15 box-border  max-lg:hidden">
+        <div className="flex-1 flex flex-col bg-primary items-center justify-center rounded-sm p-5  justify-between h-full gap-20 pt-15 pb-15 box-border  max-lg:hidden SlideRight">
           <div className="firstDesc flex flex-col gap-20">
             <div className="firDesc1">
               <h2 className={`text-2xl font-bold ${secondaryText} text-left w-80 mb-6`}>The simplest way to get suitable jobs</h2>
@@ -59,7 +60,7 @@ export default function SignUp() {
         </div>
 
         {/* Right Section */}
-        <div className={`flex-1 flex rounded-lg  flex flex-col justify-center p-5 pt-0 gap-2 min-w-130 h-full box-border max-lg:mt-5 max-lg:items-center max-lg:m-auto max-lg:min-w-100`}>
+        <div className={`flex-1 flex rounded-lg  flex flex-col justify-center p-5 pt-0 gap-2 min-w-130 h-full box-border max-lg:mt-5 max-lg:items-center max-lg:m-auto max-lg:min-w-100 SlideLeft`}>
           <div className="form-top mb-7 max-lg:max-w-100">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center font-bold mt-xs">Welcome Back</h2>
             <p className="text-gray-600 text-center">

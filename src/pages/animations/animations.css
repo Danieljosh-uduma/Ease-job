@@ -1,0 +1,49 @@
+
+/* Fade-In  Animation */
+.Fadein {
+  animation: Fadein 1s ease-in-out forwards;
+}
+
+@keyframes Fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide Right Animation */
+.SlideRight {
+  animation: SlideRight 1s ease-in-out forwards;
+}
+
+@keyframes SlideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Slide Left Animation */
+.SlideLeft {
+  animation: SlideLeft 1s ease-in-out forwards;
+}
+
+@keyframes SlideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Disable slide animations on small screens */
+@media (max-width: 1023px) {
+  .SlideRight, .SlideLeft {
+    animation: none; 
+  }
+}
