@@ -33,7 +33,7 @@ export default function SignUp() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-row gap-15 w-full max-w-5xl h-auto p-1 rounded-lg items-center m-auto mt-10 box-border   max-lg:h-auto">
+      <div className="flex flex-row gap-15 w-full max-w-5xl h-auto p-1 rounded-lg items-center m-auto mt-10 box-border max-lg:min-w-100 max-lg:h-auto max-lg:m-auto items-center max-lg:max-w-100">
 
         {/* Left Section */}
         <div className="flex-1 flex flex-col bg-primary items-center justify-center rounded-sm p-5  justify-between h-full gap-20 pt-15 pb-15 box-border  max-lg:hidden">
@@ -59,12 +59,12 @@ export default function SignUp() {
         </div>
 
         {/* Right Section */}
-        <div className={`flex-1 flex rounded-lg  flex flex-col justify-center p-5 pt-0 gap-2 min-w-130 h-full box-border`}>
-          <div className="form-top mb-7">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-left   max-lg:text-center font-bold mt-xs">Welcome back</h2>
-            <p className="text-gray-600 text-left  max-lg:text-center">
-            Don`t have an account?
-            <a href="/sign-up2" className={`text-primary hover:underline ml-1 font-bold`}>
+        <div className={`flex-1 flex rounded-lg  flex flex-col justify-center p-5 pt-0 gap-2 min-w-130 h-full box-border max-lg:mt-5 max-lg:items-center max-lg:m-auto max-lg:min-w-100`}>
+          <div className="form-top mb-7 max-lg:max-w-100">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center font-bold mt-xs">Welcome Back</h2>
+            <p className="text-gray-600 text-center">
+            Don`t` have an account?
+            <a href="/login" className={`text-primary hover:underline ml-1 font-bold`}>
               Sign Up
             </a>
             </p>
@@ -72,26 +72,26 @@ export default function SignUp() {
           <form action="submit" className="flex flex-col justify-center w-full h-auto box-center box-border m-auto">
 
             <label htmlFor="email" className="font-semibold">Email</label>
-            <input type="text" id="email" placeholder="Enter your email" className="border p-1 py-1 px-2 mb-1 rounded-md box-border mb-7 h-10 max-lg:h-12" />
+            <input type="text" id="email" placeholder="Enter your email" className="border p-1 py-1 px-2 mb-1 rounded-md box-border mb-7 h-10 max-lg:h-12 max-lg:max-w-100" />
 
             <label htmlFor="Password" className="font-semibold">Password</label>
             <input type={showPassword ? "text" : "password"}
             placeholder="*********"
-            className="w-full px-4 py-1 px-2 border rounded-md h-10 max-lg:h-12"
+            className="w-full px-4 py-1 px-2 border rounded-md h-10 max-lg:h-12 max-lg:max-w-100"
             />
-            <label htmlFor="terms" className="flex items-center mb-4 text-md">
+            <label htmlFor="terms" className="flex items-center mb-4 text-sm">
               <input type="checkbox" id="terms" className="mr-2 my-5" />
               Remember me
             </label>
-            <button type="submit" className={`py-1 px-2 text-20 rounded ${primary} ${primaryText} bg-primary font-md hover:bg-secondary text-white`}>
-              Sign Up
+            <button type="submit" className={`py-1 px-2 text-20 rounded ${primary} ${primaryText} bg-primary font-md hover:bg-secondary text-white max-lg:max-w-100`}>
+              Log In
             </button>
-            <div className="downSection w-full flex flex-col mt-5 box-border box-center  items-center gap-8">
+            <div className="downSection w-full flex flex-col mt-5 box-border box-center  items-center gap-8 max-lg:max-w-100">
               <p className="flex text-center text-sm">or</p>
             
-              <div className="horizontal flex items-center w-full box-border box-center gap-5">
-                <div className=" border-b border-black  border-1 w-200 bg-gray-300"/>
-                <p className="continueWith w-150 text-center text-sm ">Continue with</p>
+              <div className="horizontal flex items-center w-full box-border box-center gap-5 max-lg:gap-1 max-lg:w-80">
+                <div className=" border-b border-black  border-1 w-200 max-lg:w-170 bg-gray-300"/>
+                <p className="continueWith w-150 text-center text-sm max-lg:w-200 max-lg:mr-2 max-lg:ml-2">Continue with</p>
                 <div className=" border-b border-black  border-1 w-200 bg-gray-300"/>
               </div>
 
