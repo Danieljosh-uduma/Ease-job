@@ -3,6 +3,7 @@ import SignUp1 from "@/components/auth/signup1";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import JobSearchResults from "@/pages/JobSearchResults";
 import TalentSearchResults from "@/pages/TalentSearchResults";
+import SignUp from "@/pages/sign-up2";
 
 export default function AppRouter() {
   const router = createBrowserRouter([
@@ -17,6 +18,10 @@ export default function AppRouter() {
     {
       path: "/login",
       element: <div>Login Page</div>,
+    },
+    {
+      path: "/sign-up2",
+      element: <SignUp />,
     },
     //added to see page on UI for dev
     {

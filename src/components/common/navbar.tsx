@@ -11,7 +11,7 @@ export function Navbar() {
       <MenuItems />
       <div className="flex gap-2">
         <Button asChild>
-          <Link to="/login">Sign Up</Link>
+          <Link to="/sign-up2">Sign Up</Link>
         </Button>
         <Button variant="outline" asChild>
           <Link to="/login" className="max-lg:hidden">
