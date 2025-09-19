@@ -1,4 +1,5 @@
 import { HomePage } from "@/pages";
+import SignUp1 from "@/components/auth/signup1";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import JobSearchResults from "@/pages/JobSearchResults";
 import TalentSearchResults from "@/pages/TalentSearchResults";
@@ -9,6 +10,10 @@ export default function AppRouter() {
     {
       path: "/",
       element: <HomePage />,
+    },
+    {
+      path: "/signup1",
+      element: <SignUp1 />,
     },
     {
       path: "/login",
