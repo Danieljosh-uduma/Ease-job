@@ -4,6 +4,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
+import type { Role } from "@/contexts/sign-up-provider";
 
 interface RoleCardProps {
   id: string;
@@ -11,7 +12,7 @@ interface RoleCardProps {
   description: string;
   icon?: React.ReactNode;
   selected: boolean;
-  onSelect: (roleId: string) => void;
+  onSelect: (roleId: Role) => void;
 }
 
 function SignUp1Item({
@@ -26,7 +27,7 @@ function SignUp1Item({
     <>
       {/* 📱 Mobile Version (visible only on small screens) */}
       <div
-        onClick={() => onSelect(id)}
+        onClick={() => onSelect(id as Role)}
         className={`cursor-pointer transition-all duration-200 border rounded-lg p-2.5 mb-3 block md:hidden
           ${
             selected
@@ -61,7 +62,7 @@ function SignUp1Item({
 
       {/* 🖥️ Desktop Version (visible only on md+ screens) */}
       <Card
-        onClick={() => onSelect(id)}
+        onClick={() => onSelect(id as Role)}
         className={`cursor-pointer transition-all duration-200 border-1 rounded-sm hidden md:block
           hover:border-[#136443] hover:shadow-sm
           ${selected ? "bg-[#F0FDF4] border-[#136443]" : "border-[#B8B8B8]"}
