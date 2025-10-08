@@ -12,10 +12,14 @@ import {
 import { Link } from "react-router";
 export function Footer() {
 	return (
-		<div className="bg-accent p-20 max-lg:p-10 space-y-20">
-			<div className="flex mx-auto gap-10 mt-20 max-w-7xl max-lg:flex-col">
-				<div className="my-auto max-w-7xl w-[50%] max-lg:w-full">
-					<form className="grid py-10 items-center gap-3 w-fit">
+		<div className="bg-accent p-10 max-lg:p-10">
+			<div className="flex mx-auto gap-10 my-10 max-w-7xl max-lg:flex-col w-full">
+				<div className="flex flex-col justify-between max-w-7xl w-[50%] max-lg:w-full ">
+					<Link to={"/"} className="flex gap-2 items-center max-lg:hidden">
+						<Logo width={36} height={36} />
+						<p className="text-primary text-2xl font-semibold">Ease Job</p>
+					</Link>
+					<form className="grid gap-3 w-fit">
 						<p className="mb-5 text-muted-foreground font-semibold text-lg">
 							Subscribe to our Newsletter
 						</p>
@@ -36,9 +40,7 @@ export function Footer() {
 					</form>
 				</div>
 				<div className="grid gap-5 text-muted-foreground text-[14px] h-fit whitespace-nowrap">
-					<p className="mb-5 font-semibold text-muted-foreground/50">
-						COMPANY
-					</p>
+					<p className="mb-5 font-semibold text-muted-foreground/50">COMPANY</p>
 					<p>About</p>
 					<p>Resources</p>
 					<p>Career</p>
@@ -61,8 +63,8 @@ export function Footer() {
 					<p>+2348144556678</p>
 				</div>
 			</div>
-			<div className="flex bg-accent gap-3 max-w-7xl whitespace-nowrap max-lg:flex-col items-center max-lg:items-start">
-				<Link to={"/"} className="flex gap-2 items-center">
+			<div className="flex bg-accent gap-3 max-w-7xl whitespace-nowrap max-lg:flex-col items-center max-lg:items-start mx-auto">
+				<Link to={"/"} className="hidden gap-2 items-center max-lg:flex">
 					<Logo width={36} height={36} />
 					<p className="text-primary text-2xl font-semibold">Ease Job</p>
 				</Link>
